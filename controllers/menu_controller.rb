@@ -98,7 +98,7 @@ class MenuController
      puts "d - delete entry"
      puts "e - edit this entry"
      puts "m - return to main menu"
-
+     puts "z - deletes all entries"
  # #17
      selection = gets.chomp
 
@@ -115,6 +115,10 @@ class MenuController
      when "m"
        system "clear"
        main_menu
+     when "z"
+       system "clear"
+       nuke_all(entries)
+
      else
        system "clear"
        puts "#{selection} is not a valid input"
@@ -163,6 +167,10 @@ class MenuController
      puts "Updated entry:"
      puts entry
    end
+   def nuke_all(entries)
+     @address_book.delete(entries)
+     puts "all entries have been deleted"
+   end
    def search_entries
  # #9
      print "Search by name: "
@@ -199,6 +207,11 @@ class MenuController
      when "m"
        system "clear"
        main_menu
+     when "z"
+       system "clear"
+       nuke_all(entries)
+       main_menu
+
      else
        system "clear"
        puts "#{selection} is not a valid input"
