@@ -32,7 +32,7 @@ class MenuController
           main_menu
       when 3
        system "clear"
-       create_an_entry
+       create_entry
        main_menu
       when 4
        system "clear"
@@ -53,23 +53,9 @@ class MenuController
        main_menu
      end
    end
-
+end
  # #10
-   def view_all_entries
-   end
 
-   def view_entry_number_n
-   end
-
-   def create_entry
-   end
-
-   def search_entries
-   end
-
-   def read_csv
-   end
- end
  def create_entry
  # #11
      system "clear"
